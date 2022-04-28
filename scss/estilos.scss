@@ -1,0 +1,123 @@
+$background-image:url(/10921-marmol.png);
+$font-dietics:'Nunito', sans-serif;
+$shadow-box:7px 13px 37px #000;
+$mapaColor:(
+    color-gris:gray,
+    color-blanco:white,
+);
+@mixin footer ($display,$liststyle,$textalign,$wordspacing,$justifycontent){
+    display: flex;
+    list-style: none;
+    text-align: center;
+    word-spacing: 4cm;
+    justify-content: space-evenly;
+}
+.parallax{
+    background-image:$background-image;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+.encabezado{
+    text-align: center;
+    color:map-get($mapaColor,color-gris);
+    font-family:$font-dietics;
+    text-transform: uppercase;
+    font-size: large;
+    background-attachment: fixed;
+}
+.footer{
+ @include footer(flex,none ,center ,4cm ,space-evenly )
+}
+.footer1{
+    @extend.footer;
+    width: 100%;
+    margin-top: 4cm;
+}
+.font-p{
+    color:map-get($mapaColor,color-gris);
+    font-family: $font-dietics;
+}
+.font{
+    @extend.font-p;
+        text-transform: uppercase;
+        font-size: 22px;
+        text-decoration: underline;
+}
+.form-register{
+    box-sizing: border-box;
+    width: 500px;
+    background-color: rgb(100, 105, 114);
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    border-radius: 0.2cm;
+    font-family:$font-dietics;
+    color:map-get($mapaColor,color-blanco);
+    align-items: center;
+    box-shadow: $shadow-box;
+    text-align: center;
+}
+.titulo-formulario{
+    font-size: 20px;
+    margin-bottom: 20px;    
+    font-family:$font-dietics;
+    color:map-get($mapaColor,color-blanco);
+    text-align: center;
+}
+.titulo-formulario1{
+    @extend.titulo-formulario;
+    color:map-get($mapaColor,color-gris);
+}
+.controls{
+    width: 90%;
+    background: rgb(56, 53, 53);
+    padding: 10px;
+    border-radius: 0.2cm;
+    margin-bottom: 16px;
+    border: 1px solid white;
+    font-family:$font-dietics;
+    color:map-get($mapaColor,color-blanco);
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 1s;
+        &:focus{
+            font-size: 18px;
+            width: 95%;
+        }
+}
+.form-btn{
+    width: 75%;
+    color:map-get($mapaColor,color-blanco);
+    border: solid white;
+    padding: 12px;
+    margin: 5px;
+    font-size: 12px;
+    color:map-get($mapaColor,color-gris);
+    border-radius: 0.2cm;
+    cursor:pointer;
+    transition: all 0.7s;
+    outline: none;
+        &:hover{
+            box-shadow: inset 10cm 0 0 0 rgb(155, 143, 143);
+            cursor: pointer;
+         }
+}
+@media screen and(max-width:480px) {
+    .form-register{
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px; 
+        padding: auto;
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center space-between;
+        padding-left: 0;
+    }    
+}
