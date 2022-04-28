@@ -1,5 +1,5 @@
 .parallax {
-  background-image: url(10921-marmol.png);
+  background-image: url(/10921-marmol.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,12 +78,12 @@
 
 .form-btn {
   width: 75%;
-  background-color: gray;
+  color: white;
   border: solid white;
   padding: 12px;
   margin: 5px;
   font-size: 12px;
-  color: white;
+  color: gray;
   border-radius: 0.2cm;
   cursor: pointer;
   transition: all 0.7s;
