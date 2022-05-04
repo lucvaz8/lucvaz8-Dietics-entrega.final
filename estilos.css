@@ -7,7 +7,7 @@
   margin: 0; }
 
 .parallax {
-  background-image: url(/10921-marmol.png);
+  background-image: url(10921-marmol.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,7 +28,7 @@
   justify-content: space-evenly; }
 
 .menu {
-  background-image: url(/10921-marmol.png);
+  background-image: url(10921-marmol.png);
   text-transform: uppercase;
   border-radius: 0.5cm;
   color: gray;
@@ -47,7 +47,7 @@
     cursor: pointer; }
 
 .card {
-  background-image: url(/10921-marmol.png);
+  background-image: url(10921-marmol.png);
   border: solid cornsilk;
   box-shadow: 7px 13px 37px gray;
   align-items: center;
@@ -82,7 +82,7 @@
   height: 1.5cm;
   border: none;
   color: gray;
-  background-image: url(/10921-marmol.png);
+  background-image: url(10921-marmol.png);
   border-radius: 0.5cm;
   box-shadow: inset 0 0 0 0 #474243;
   transition: ease-out 0.3s;
