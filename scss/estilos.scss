@@ -2,7 +2,7 @@ $background-image:url(/10921-marmol.png);
 $font-dietics:'Nunito', sans-serif;
 $shadow-box:7px 13px 37px #000;
 $mapaColor:(
-    color-gris:gray,
+    color-gris:black,
     color-blanco:white,
 );
 @mixin footer ($display,$liststyle,$textalign,$wordspacing,$justifycontent){
@@ -31,12 +31,14 @@ $mapaColor:(
     background-size: cover;    
 }
 .encabezado{
+    margin-top: 10px;
     text-align: center;
     color:map-get($mapaColor,color-gris);
     font-family:$font-dietics;
     text-transform: uppercase;
     font-size: large;
     background-attachment: fixed;
+   
 }
 .contenedor-menu{
     list-style-type: none;
@@ -66,8 +68,8 @@ $mapaColor:(
 }
 .card{
     background-image: url(/10921-marmol.png);
-    border: solid cornsilk;
-    box-shadow: 7px 13px 37px gray;
+    border: 1px solid rgb(209, 202, 174);
+    box-shadow: 7px 13px 37px black;
     align-items: center;
     margin-left: auto;
    justify-content: space-evenly;
@@ -81,10 +83,21 @@ $mapaColor:(
 .card-title{
     font-family: 'Nunito', sans-serif;
     color:map-get($mapaColor,color-gris);
+    font-weight:bolder;
 }
 .card-description{
     @extend.card-title;
     align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.info-nutricional{
+    list-style: none;
+}
+.texto-izquierdo{
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .card-button{
     @extend.card-title;
@@ -102,8 +115,10 @@ $mapaColor:(
     width: 5cm;
     height: 1.5cm;
     border: none;
+    margin-bottom: 10px;
     color:map-get($mapaColor,color-gris);
     background-image: url(/10921-marmol.png);
+    border: solid rgb(209, 202, 174);
     border-radius: 0.5cm;
     box-shadow: inset 0 0 0 0 rgb(71, 66, 67);
     transition: ease-out 0.3s;
@@ -119,17 +134,19 @@ $mapaColor:(
 .footer1{
     @extend.footer;
     width: 100%;
-    margin-top: 4cm;
 }
 .font-p{
     color:map-get($mapaColor,color-gris);
     font-family: $font-dietics;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 .font{
     @extend.font-p;
-        text-transform: uppercase;
-        font-size: 22px;
-        text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 30px;
 }
 .form-register{
     box-sizing: border-box;
@@ -153,6 +170,7 @@ $mapaColor:(
     font-family:$font-dietics;
     color:map-get($mapaColor,color-blanco);
     text-align: center;
+    text-transform: uppercase;
 }
 .titulo-formulario1{
     @extend.titulo-formulario;
@@ -245,7 +263,6 @@ $mapaColor:(
     color:map-get($mapaColor,color-blanco);
     text-align: center;
     background-color: rgb(56, 53, 53);
-    box-shadow: 7px 13px 37px #000;
     border-radius: 0.2cm;
 }
 .card-title-qs{
@@ -255,22 +272,11 @@ $mapaColor:(
     text-align: center;
     text-transform: uppercase;
     font-size: 30px;
-    color: #f5f5f5;
-    text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #919191,
-        1px 10px 1px #919191,
-    1px 18px 6px rgba(16,16,16,0.4),
-    1px 22px 10px rgba(16,16,16,0.2),
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
+    color: black;
     margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight: 1000;
 }
 .card-text-qs{
     font-family: 'Nunito', sans-serif;
@@ -278,6 +284,7 @@ $mapaColor:(
     text-align: center;
     padding-left: 25px;
     padding-right: 25px;
+    list-style: none;
 }
 .contenedor-fotos{
     display: flex;
@@ -320,16 +327,6 @@ $mapaColor:(
     border-radius: 0.5cm;
     padding: auto;
 }
-.font-p{
-    color:map-get($mapaColor,color-gris);
-    font-family: 'Nunito', sans-serif;
-}
-.font{
-    @extend.font-p;
-    text-transform: uppercase;
-    font-size: 22px;
-    text-decoration: underline;
-}
 .font-p-macros{
     @extend.font-p;
     display: flex;
@@ -337,22 +334,7 @@ $mapaColor:(
     text-align: center;
     justify-content: flex-start;
 }
-@media only screen and (max-width:1000px){
-    .contenedor-menu{
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:center space-evenly;
-        gap: 0.5cm;
-        font-size: small;
-        padding: 0.5cm;
-        margin:0;
-        align-items: center;
-    }
-    .menu{
-       font-size: small;
-       align-items: center;
-    }
+@media only screen and (max-width:900px){
     .footer1{
         display: flex;
         flex-direction: row;
@@ -364,61 +346,6 @@ $mapaColor:(
         flex-direction: row;
         justify-content: center space-between;
         padding-left: 0;
-    }
-    .font{
-        color: map-get($mapaColor,color-gris);
-        font-family: 'Nunito', sans-serif;
-        text-transform: uppercase;
-        font-size: 15px;
-        text-decoration: underline;
-        align-items: center;
-        margin: 0.5cm;
-        flex-wrap: wrap;
-    }
-    .font-p{
-        color: map-get($mapaColor,color-gris);
-        font-family: 'Nunito', sans-serif;
-        font-size: 12px;
-        flex-wrap: wrap;
-        padding: 0.2cm;
-    }
-    .contenedor-fotos{
-        display: flex;
-        justify-content: center;
-        background-size: contain;
-        border-radius: 0.5cm;
-        border: 1px solid black;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 7px 13px 37px gray;
-        width: 300px;
-        padding: auto;
-        flex-wrap: wrap;
-        grid-template-columns: 400px;
-    }
-    .fotos{
-        width: 230px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-        gap: 1cm;
-    }
-    .items-fotos{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        float: right;
-        text-align: left;
-        border: 1px solid gray;
-        box-shadow: 7px 13px 37px #000;
-        border-radius: 0.5cm;
-        padding: auto;
-        flex-wrap: wrap;
     }
 }
 @media screen and(max-width:480px) {
